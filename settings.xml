@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="358d3e90-b1ad-45e7-adee-1029ada0d76b" activeEnvironment="localhost" name="random project" lastOpened="2016-08-02T11:43:46.587+02:00" resourceRoot="${projectDir}" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="358d3e90-b1ad-45e7-adee-1029ada0d76b" activeEnvironment="localhost" name="random project" lastOpened="2016-08-02T12:02:09.204+02:00" resourceRoot="${projectDir}" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="358d3e90-b1ad-45e7-adee-1029ada0d76bfileName">tmp</con:setting></con:settings>
   <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>git@github.com:shadidchowdhury/test-git-plugin.git</con:repositoryIdentifier></con:vcsConfiguration>
   

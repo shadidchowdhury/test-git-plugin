@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:mockService id="c487f882-768e-40df-807d-397670f5300c" port="8081" path="/abc/v1" host="localhost" name="abcBusinessBinding Virt" incomingWss="Incoming_server" outgoingWss="Outgoing_server" autoStart="false" xmlns:con="http://eviware.com/soapui/config">
+<con:mockService id="c487f882-768e-40df-807d-397670f5300c" port="8081" path="/abc/v1" host="localhost" name="abcVirts" incomingWss="Incoming_server" outgoingWss="Outgoing_server" autoStart="false" xmlns:con="http://eviware.com/soapui/config">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">true</con:setting>
     <con:setting id="c487f882-768e-40df-807d-397670f5300cfileName">abcBusinessBinding-Virt</con:setting></con:settings>
