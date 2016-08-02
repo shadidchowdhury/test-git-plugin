@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:WsdlInterface" id="16730acb-717b-44ef-b398-a63ba3e5d50d" wsaVersion="NONE" name="abcBusinessBinding" type="wsdl" bindingName="{http://service.a.co.uk/abc/v1}abcBusinessBinding" soapVersion="1_1" anonymous="optional" definition="file:/H:/projects/soapui/poc%20-%20bug%2000174750/project/b.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:interface xsi:type="con:WsdlInterface" id="16730acb-717b-44ef-b398-a63ba3e5d50d" wsaVersion="NONE" name="randomAPI" type="wsdl" bindingName="{http://service.a.co.uk/abc/v1}abcBusinessBinding" soapVersion="1_1" anonymous="optional" definition="file:/H:/projects/soapui/poc%20-%20bug%2000174750/project/b.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
     <con:settings><con:setting id="16730acb-717b-44ef-b398-a63ba3e5d50dfileName">abcBusinessBinding</con:setting></con:settings>
     <con:definitionCache type="TEXT" rootPart="file:\H:\projects\soapui\poc%20-%20bug%2000174750\project\b.wsdl">
       <con:part>

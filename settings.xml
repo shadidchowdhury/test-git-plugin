@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="358d3e90-b1ad-45e7-adee-1029ada0d76b" activeEnvironment="localhost" name="random project" lastOpened="2016-08-02T11:28:48.031+02:00" resourceRoot="${projectDir}" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="358d3e90-b1ad-45e7-adee-1029ada0d76b" activeEnvironment="localhost" name="random project" lastOpened="2016-08-02T11:43:46.587+02:00" resourceRoot="${projectDir}" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings><con:setting id="358d3e90-b1ad-45e7-adee-1029ada0d76bfileName">tmp</con:setting></con:settings>
   <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>git@github.com:shadidchowdhury/test-git-plugin.git</con:repositoryIdentifier></con:vcsConfiguration>
   
@@ -215,13 +215,13 @@
   <con:oAuth2ProfileContainer/>
   
   <con:environment id="a8aeb557-f6c6-489d-9738-57ec0f1d6299" name="localhost">
-    <con:service type="SOAP" name="abcBusinessBinding">
+    <con:service type="SOAP" name="randomAPI">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="Incoming_client" outgoingWss="Outgoing_client" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:8081/abc/v1</con:endpoint>
     </con:service>
     <con:databaseConnectionContainer/>
   </con:environment>
   <con:environment id="73db0f3b-dce5-41c9-b134-184a9deb0cb7" name="localhost - client -> server communication duplicates the same WSS pattern as working correctly server -> client">
-    <con:service type="SOAP" name="abcBusinessBinding">
+    <con:service type="SOAP" name="randomAPI">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="Incoming_cloneOfClient" outgoingWss="Outgoing_client" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:8082/abc/v1</con:endpoint>
     </con:service>
     <con:databaseConnectionContainer/>
