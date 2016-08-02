@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="852651f0-8cb1-4b86-a5b3-7de2c1b30ead" isOneWay="false" action="http://service.a.co.uk/abc/v1/unabc" name="unabc" bindingOperationName="unabc" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+      <con:settings><con:setting id="852651f0-8cb1-4b86-a5b3-7de2c1b30eadfileName">unabc</con:setting></con:settings>
+      <con:call id="788ad84f-61d3-4017-8951-276317caa6ae" name="Request 1">
+        <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost/abc/v1</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:testCase2>
+         <v1:in>?</v1:in>
+         <v1:enterpriseObj>
+            <v1:element1>?</v1:element1>
+            <v1:element2>?</v1:element2>
+            <v1:element3>?</v1:element3>
+            <v1:element4>?</v1:element4>
+            <v1:element5>?</v1:element5>
+         </v1:enterpriseObj>
+      </v1:testCase2>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/unabc"/>
+        <con:wsrmConfig version="1.2"/><con:environmentSpec>
+          <con:entry environmentId="a8aeb557-f6c6-489d-9738-57ec0f1d6299">
+            <con:authProfile>Basic</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="73db0f3b-dce5-41c9-b134-184a9deb0cb7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:call>
+    </con:operation>

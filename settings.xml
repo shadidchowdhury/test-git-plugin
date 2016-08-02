@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="358d3e90-b1ad-45e7-adee-1029ada0d76b" activeEnvironment="localhost" name="abcBusinessBinding Virt Project 1" lastOpened="2016-08-02T11:26:12.297+02:00" resourceRoot="${projectDir}" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>git@github.com:shadidchowdhury/test-git-plugin.git</con:repositoryIdentifier></con:vcsConfiguration>
+  
+  
+  
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer>
+    <con:crypto>
+      <con:source>C:/SoapUI/Support/ticket_files/00174750/client.jks</con:source>
+      <con:password>123</con:password>
+      <con:type>KEYSTORE</con:type>
+    </con:crypto>
+    <con:crypto>
+      <con:source>C:/SoapUI/Support/ticket_files/00174750/server.jks</con:source>
+      <con:password>123</con:password>
+      <con:type>KEYSTORE</con:type>
+    </con:crypto>
+    <con:incoming>
+      <con:name>Incoming_client</con:name>
+      <con:decryptCrypto>client.jks</con:decryptCrypto>
+      <con:signatureCrypto>client.jks</con:signatureCrypto>
+      <con:decryptPassword>123</con:decryptPassword>
+    </con:incoming>
+    <con:incoming>
+      <con:name>Incoming_server</con:name>
+      <con:decryptCrypto>server.jks</con:decryptCrypto>
+      <con:signatureCrypto>server.jks</con:signatureCrypto>
+      <con:decryptPassword>123</con:decryptPassword>
+    </con:incoming>
+    <con:incoming>
+      <con:name>Incoming_cloneOfClient</con:name>
+      <con:decryptCrypto>client.jks</con:decryptCrypto>
+      <con:signatureCrypto>client.jks</con:signatureCrypto>
+      <con:decryptPassword>123</con:decryptPassword>
+    </con:incoming>
+    <con:outgoing actor="">
+      <con:name>Outgoing_client</con:name>
+      <con:username/>
+      <con:password/>
+      <con:entry type="Timestamp">
+        <con:configuration>
+          <timeToLive>5000</timeToLive>
+          <strictTimestamp>true</strictTimestamp>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Username" username="helloworld" password="welcome1">
+        <con:configuration>
+          <addCreated>true</addCreated>
+          <addNonce>true</addNonce>
+          <passwordType>PasswordText</passwordType>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Signature" username="client" password="123">
+        <con:configuration>
+          <crypto>client.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <signatureAlgorithm>http://www.w3.org/2000/09/xmldsig#rsa-sha1</signatureAlgorithm>
+          <signatureCanonicalization>http://www.w3.org/2001/10/xml-exc-c14n#</signatureCanonicalization>
+          <useSingleCert>true</useSingleCert>
+          <bspCompliant>true</bspCompliant>
+          <digestAlgorithm>http://www.w3.org/2000/09/xmldsig#sha1</digestAlgorithm>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Timestamp"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="UsernameToken"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
+  <con:entry key="enc" value="Element"/>
+  <con:entry key="id" value=""/>
+</xml-fragment>]]></signaturePart>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="enc" value="Element"/>
+  <con:entry key="id" value=""/>
+</xml-fragment>]]></signaturePart>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Encryption" username="server">
+        <con:configuration>
+          <crypto>client.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <symmetricEncAlgorithm>http://www.w3.org/2001/04/xmlenc#aes128-cbc</symmetricEncAlgorithm>
+          <encKeyTransport>http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p</encKeyTransport>
+          <embeddedKeyName/>
+          <embeddedKeyPassword/>
+          <encryptionCanonicalization/>
+          <encryptSymmetricKey>true</encryptSymmetricKey>
+          <encryptionPart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Content"/>
+</xml-fragment>]]></encryptionPart>
+          <encryptionPart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="UsernameToken"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Content"/>
+</xml-fragment>]]></encryptionPart>
+        </con:configuration>
+      </con:entry>
+      <con:usePredefinedOrder>false</con:usePredefinedOrder>
+    </con:outgoing>
+    <con:outgoing>
+      <con:name>Outgoing_server</con:name>
+      <con:entry type="Timestamp">
+        <con:configuration>
+          <timeToLive>5000</timeToLive>
+          <strictTimestamp>true</strictTimestamp>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Signature" username="server" password="123">
+        <con:configuration>
+          <crypto>server.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <signatureAlgorithm>http://www.w3.org/2000/09/xmldsig#rsa-sha1</signatureAlgorithm>
+          <signatureCanonicalization>http://www.w3.org/2001/10/xml-exc-c14n#</signatureCanonicalization>
+          <useSingleCert>true</useSingleCert>
+          <bspCompliant>true</bspCompliant>
+          <digestAlgorithm>http://www.w3.org/2000/09/xmldsig#sha1</digestAlgorithm>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Timestamp"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Encryption" username="client" password="">
+        <con:configuration>
+          <crypto>server.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <symmetricEncAlgorithm>http://www.w3.org/2001/04/xmlenc#aes128-cbc</symmetricEncAlgorithm>
+          <encKeyTransport>http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p</encKeyTransport>
+          <embeddedKeyName/>
+          <embeddedKeyPassword/>
+          <encryptionCanonicalization/>
+          <encryptSymmetricKey>true</encryptSymmetricKey>
+          <encryptionPart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Content"/>
+</xml-fragment>]]></encryptionPart>
+        </con:configuration>
+      </con:entry>
+      <con:usePredefinedOrder>false</con:usePredefinedOrder>
+    </con:outgoing>
+    <con:outgoing>
+      <con:name>Outgoing_cloneOfServer</con:name>
+      <con:entry type="Timestamp">
+        <con:configuration>
+          <timeToLive>5000</timeToLive>
+          <strictTimestamp>true</strictTimestamp>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Signature" username="server" password="123">
+        <con:configuration>
+          <crypto>server.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <signatureAlgorithm>http://www.w3.org/2000/09/xmldsig#rsa-sha1</signatureAlgorithm>
+          <signatureCanonicalization>http://www.w3.org/2001/10/xml-exc-c14n#</signatureCanonicalization>
+          <useSingleCert>true</useSingleCert>
+          <bspCompliant>true</bspCompliant>
+          <digestAlgorithm>http://www.w3.org/2000/09/xmldsig#sha1</digestAlgorithm>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Timestamp"/>
+  <con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+          <signaturePart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Element"/>
+</xml-fragment>]]></signaturePart>
+        </con:configuration>
+      </con:entry>
+      <con:entry type="Encryption" username="client" password="">
+        <con:configuration>
+          <crypto>server.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <symmetricEncAlgorithm>http://www.w3.org/2001/04/xmlenc#aes128-cbc</symmetricEncAlgorithm>
+          <encKeyTransport>http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p</encKeyTransport>
+          <embeddedKeyName/>
+          <embeddedKeyPassword/>
+          <encryptionCanonicalization/>
+          <encryptSymmetricKey>true</encryptSymmetricKey>
+          <encryptionPart><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="name" value="Body"/>
+  <con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <con:entry key="id" value=""/>
+  <con:entry key="enc" value="Content"/>
+</xml-fragment>]]></encryptionPart>
+        </con:configuration>
+      </con:entry>
+      <con:usePredefinedOrder>false</con:usePredefinedOrder>
+    </con:outgoing>
+  </con:wssContainer>
+  <con:databaseConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  
+  <con:environment id="a8aeb557-f6c6-489d-9738-57ec0f1d6299" name="localhost">
+    <con:service type="SOAP" name="abcBusinessBinding">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="Incoming_client" outgoingWss="Outgoing_client" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:8081/abc/v1</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+  </con:environment>
+  <con:environment id="73db0f3b-dce5-41c9-b134-184a9deb0cb7" name="localhost - client -> server communication duplicates the same WSS pattern as working correctly server -> client">
+    <con:service type="SOAP" name="abcBusinessBinding">
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="Incoming_cloneOfClient" outgoingWss="Outgoing_client" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://localhost:8082/abc/v1</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

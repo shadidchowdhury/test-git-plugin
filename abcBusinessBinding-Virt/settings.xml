@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockService id="c487f882-768e-40df-807d-397670f5300c" port="8081" path="/abc/v1" host="localhost" name="abcBusinessBinding Virt" incomingWss="Incoming_server" outgoingWss="Outgoing_server" autoStart="false" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">true</con:setting>
+    <con:setting id="c487f882-768e-40df-807d-397670f5300cfileName">abcBusinessBinding-Virt</con:setting></con:settings>
+    <con:startScript>log.info "mock onStart"</con:startScript>
+    <con:properties/>
+    <con:onRequestScript>log.info "mock onRequest"
+
+// Def variable
+def request = mockRequest.getRequestContent()
+def opeList = null
+def operation = ""
+
+log.info mockRequest.getRequestHeaders()['SOAPAction']
+
+log.info request</con:onRequestScript>
+    <con:afterRequestScript>log.info "mock afterRequest"</con:afterRequestScript>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:dataSources/>
+    <con:headerValidator type="NONE"/>
+    
+    
+  </con:mockService>

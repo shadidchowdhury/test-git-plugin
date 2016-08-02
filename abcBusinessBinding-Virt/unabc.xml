@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockOperation name="unabc" id="5b957e2d-35f9-4ba9-9553-21538bc7809c" interface="abcBusinessBinding" operation="unabc" xmlns:con="http://eviware.com/soapui/config">
+      <con:settings><con:setting id="5b957e2d-35f9-4ba9-9553-21538bc7809cfileName">unabc</con:setting></con:settings>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/><con:response name="Response 1" id="7c25fe1c-84dc-4313-9082-b70cad8b3f61" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:testCase2Response>
+         <v1:out>?</v1:out>
+         <v1:enterpriseObj>
+            <v1:element1>?</v1:element1>
+            <v1:element2>?</v1:element2>
+            <v1:element3>?</v1:element3>
+            <v1:element4>?</v1:element4>
+            <v1:element5>?</v1:element5>
+         </v1:enterpriseObj>
+      </v1:testCase2Response>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/unabc"/>
+      </con:response>
+    </con:mockOperation>

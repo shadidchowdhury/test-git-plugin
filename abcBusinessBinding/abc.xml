@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="9bb3b5ef-3849-4e56-ae24-af4c8cf325d6" isOneWay="false" action="http://service.a.co.uk/abc/v1/abc" name="abc" bindingOperationName="abc" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+      <con:settings><con:setting id="9bb3b5ef-3849-4e56-ae24-af4c8cf325d6fileName">abc</con:setting></con:settings>
+      <con:call id="401f0f62-59b0-40ff-b0e6-c74033ee1b07" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8082/abc/v1</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><wsse:UsernameToken wsu:Id="UsernameToken-B34F8BAB5DA36586F214642540376834"><wsse:Username>helloworld</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">welcome1</wsse:Password><wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">L9NZ20PeCyZaflP0EEQ1yA==</wsse:Nonce><wsu:Created>2016-05-26T09:13:57.683Z</wsu:Created></wsse:UsernameToken><wsu:Timestamp wsu:Id="TS-B34F8BAB5DA36586F214642540376833"><wsu:Created>2016-05-26T09:13:57.683Z</wsu:Created><wsu:Expires>2016-05-26T10:37:17.683Z</wsu:Expires></wsu:Timestamp></wsse:Security></soapenv:Header>
+   <soapenv:Body>
+      <v1:testCase1>
+         <v1:a>?</v1:a>
+         <v1:b>?</v1:b>
+         <v1:c>?</v1:c>
+         <v1:d>?</v1:d>
+      </v1:testCase1>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/abc"/>
+        <con:wsrmConfig version="1.2"/>
+        <con:environmentSpec>
+          <con:entry environmentId="a8aeb557-f6c6-489d-9738-57ec0f1d6299">
+            <con:authProfile>Basic</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="73db0f3b-dce5-41c9-b134-184a9deb0cb7">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:call>
+    </con:operation>

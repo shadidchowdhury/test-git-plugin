@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="16730acb-717b-44ef-b398-a63ba3e5d50d" wsaVersion="NONE" name="abcBusinessBinding" type="wsdl" bindingName="{http://service.a.co.uk/abc/v1}abcBusinessBinding" soapVersion="1_1" anonymous="optional" definition="file:/H:/projects/soapui/poc%20-%20bug%2000174750/project/b.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings><con:setting id="16730acb-717b-44ef-b398-a63ba3e5d50dfileName">abcBusinessBinding</con:setting></con:settings>
+    <con:definitionCache type="TEXT" rootPart="file:\H:\projects\soapui\poc%20-%20bug%2000174750\project\b.wsdl">
+      <con:part>
+        <con:url>file:\H:\projects\soapui\poc%20-%20bug%2000174750\project\b.wsdl</con:url>
+        <con:content><![CDATA[<WL5G3N0:definitions name="Solicitor_Business_v1" targetNamespace="http://service.a.co.uk/abc/v1" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N7="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N6="http://service.a.co.uk/abc/v1">
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://service.a.co.uk/abc/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.a.co.uk/abc/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="testCase1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="a" type="xsd:string"/>
+            <xsd:element name="b" type="xsd:string"/>
+            <xsd:element name="c" type="xsd:string"/>
+            <xsd:element name="d" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testCase1Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out1" type="xsd:string"/>
+            <xsd:element name="out2" type="xsd:int"/>
+            <xsd:sequence>
+              <xsd:element ref="tns:enterpriseObj"/>
+            </xsd:sequence>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testCase2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+            <xsd:element ref="tns:enterpriseObj"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="testCase2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+            <xsd:element ref="tns:enterpriseObj"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="enterpriseObj">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="element1" type="xsd:string"/>
+            <xsd:element name="element2" type="xsd:int"/>
+            <xsd:element name="element3" type="xsd:dateTime"/>
+            <xsd:element name="element4" type="xsd:double"/>
+            <xsd:element name="element5" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="abcRequest">
+    <WL5G3N0:part element="WL5G3N6:testCase1" name="abcRequestPart"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="abcResponse">
+    <WL5G3N0:part element="WL5G3N6:testCase1Response" name="abcResponsePart"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="unabcRequest">
+    <WL5G3N0:part element="WL5G3N6:testCase2" name="unabcRequestPart"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="unabcResponse">
+    <WL5G3N0:part element="WL5G3N6:testCase2Response" name="unabcResponsePart"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="abcBusiness_BSProviderInterface">
+    <WL5G3N0:operation name="abc">
+      <WL5G3N0:input message="WL5G3N6:abcRequest"/>
+      <WL5G3N0:output message="WL5G3N6:abcResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="unabc">
+      <WL5G3N0:input message="WL5G3N6:unabcRequest"/>
+      <WL5G3N0:output message="WL5G3N6:unabcResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="abcBusinessBinding" type="WL5G3N6:abcBusiness_BSProviderInterface">
+    <WL5G3N7:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="abc">
+      <WL5G3N7:operation soapAction="http://service.a.co.uk/abc/v1/abc" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N7:body parts="abcRequestPart" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N7:body parts="abcResponsePart" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="unabc">
+      <WL5G3N7:operation soapAction="http://service.a.co.uk/abc/v1/unabc" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N7:body parts="unabcRequestPart" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N7:body parts="unabcResponsePart" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="abcBusinessBindingQSService1">
+    <WL5G3N0:port binding="WL5G3N6:abcBusinessBinding" name="abcBusinessBindingQSPort1">
+      <WL5G3N7:address location="http://localhost/abc/v1"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://localhost/abc/v1</con:endpoint>
+      <con:endpoint>http://localhost:8082/abc/v1</con:endpoint>
+    </con:endpoints>
+    
+    
+  </con:interface>

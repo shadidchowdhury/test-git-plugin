@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:mockOperation name="abc" id="165d67bc-b0d1-4e8f-b547-0f9eef63d92a" interface="abcBusinessBinding" operation="abc" xmlns:con="http://eviware.com/soapui/config">
+      <con:settings><con:setting id="165d67bc-b0d1-4e8f-b547-0f9eef63d92afileName">abc</con:setting></con:settings>
+      <con:defaultResponse>7</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchPath>log.info 'Dispatch script'
+
+def groovyUtil = new com.eviware.soapui.support.GroovyUtils(context)
+def holder = groovyUtil.getXmlHolder(mockRequest.requestContent)
+
+def response = holder.getNodeValue('//*:Body/*:testCase1')
+
+log.info "We see it on dispatch level" 
+
+return response</con:dispatchPath>
+      <con:dispatchXPath>declare namespace v1='http://service.a.co.uk/abc/v1';
+//v1:testCase1[1]/v1:a[1]</con:dispatchXPath>
+      <con:routeScript/><con:response name="1" id="81054aec-0e75-4e99-ae52-bae5375730ff" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header/>
+   <soapenv:Body resp="1">
+      <v1:testCase1Response>
+         <v1:out1>${#MockResponse#Request#//*:testCase1/*:a} ${#MockResponse#name}</v1:out1>
+         <v1:out2>${#MockResponse#Request#//*:testCase1/*:b}</v1:out2>
+         <v1:enterpriseObj>
+            <v1:element1>${=${#MockResponse#Request#//*:testCase1/*:a}/${#MockResponse#Request#//*:testCase1/*:b}}</v1:element1>
+            <v1:element2>${=${#MockResponse#Request#//*:testCase1/*:a}*${#MockResponse#Request#//*:testCase1/*:b}}</v1:element2>
+            <v1:element3>2011-06-09T16:37:17+01:00</v1:element3>
+            <v1:element4>${=${#MockResponse#Request#//*:testCase1/*:a}+${#MockResponse#Request#//*:testCase1/*:b}}</v1:element4>
+            <v1:element5>${=${#MockResponse#Request#//*:testCase1/*:d}-${#MockResponse#Request#//*:testCase1/*:c}}</v1:element5>
+         </v1:enterpriseObj>
+      </v1:testCase1Response>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/abc"/>
+      </con:response>
+      <con:response name="2" id="7f4c3b8c-104c-4885-9024-d27db077b62e" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header/>
+   <soapenv:Body resp="2">
+      <v1:testCase1Response>
+         <v1:out1>${#MockResponse#Request#//*:testCase1/*:a} ${#MockResponse#name}</v1:out1>
+         <v1:out2>${#MockResponse#Request#//*:testCase1/*:b}</v1:out2>
+         <v1:enterpriseObj>
+            <v1:element1>${=${#MockResponse#Request#//*:testCase1/*:a}/${#MockResponse#Request#//*:testCase1/*:b}}</v1:element1>
+            <v1:element2>${=${#MockResponse#Request#//*:testCase1/*:a}*${#MockResponse#Request#//*:testCase1/*:b}}</v1:element2>
+            <v1:element3>2011-06-09T16:37:17+01:00</v1:element3>
+            <v1:element4>${=${#MockResponse#Request#//*:testCase1/*:a}+${#MockResponse#Request#//*:testCase1/*:b}}</v1:element4>
+            <v1:element5>${=${#MockResponse#Request#//*:testCase1/*:d}-${#MockResponse#Request#//*:testCase1/*:c}}</v1:element5>
+         </v1:enterpriseObj>
+      </v1:testCase1Response>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/abc"/>
+      </con:response>
+      <con:response name="7" id="1d0c1571-2393-4465-9109-17cc5e44c1e5" httpResponseStatus="200" encoding="UTF-8" dataSource="">
+        <con:settings/>
+        <con:script/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://service.a.co.uk/abc/v1">
+   <soapenv:Header/>
+   <soapenv:Body resp="7">
+      <v1:testCase1Response>
+         <v1:out1>${#MockResponse#Request#//*:testCase1/*:a} ${#MockResponse#name}</v1:out1>
+         <v1:out2>${#MockResponse#Request#//*:testCase1/*:b}</v1:out2>
+         <v1:enterpriseObj>
+            <v1:element1>${=${#MockResponse#Request#//*:testCase1/*:a}/${#MockResponse#Request#//*:testCase1/*:b}}</v1:element1>
+            <v1:element2>${=${#MockResponse#Request#//*:testCase1/*:a}*${#MockResponse#Request#//*:testCase1/*:b}}</v1:element2>
+            <v1:element3>2011-06-09T16:37:17+01:00</v1:element3>
+            <v1:element4>${=${#MockResponse#Request#//*:testCase1/*:a}+${#MockResponse#Request#//*:testCase1/*:b}}</v1:element4>
+            <v1:element5>${=${#MockResponse#Request#//*:testCase1/*:d}-${#MockResponse#Request#//*:testCase1/*:c}}</v1:element5>
+         </v1:enterpriseObj>
+      </v1:testCase1Response>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.a.co.uk/abc/v1/abc"/>
+      </con:response>
+    </con:mockOperation>
